@@ -1,0 +1,96 @@
+:root {
+  /* darkroom base */
+  --ink: #1c1712;
+  --ink-raised: #26201a;
+  --neg: #2f2620;
+  --neg-line: rgba(241, 231, 214, 0.14);
+
+  /* proof paper */
+  --paper: #f1e7d6;
+  --paper-dim: #e4d7bf;
+  --paper-line: rgba(28, 23, 18, 0.14);
+
+  /* accents */
+  --safelight: #e2481b;
+  --safelight-dim: rgba(226, 72, 27, 0.35);
+  --tide: #2e6b63;
+  --tide-bright: #4a9188;
+  --brass: #c7a339;
+
+  /* type */
+  --font-display: "IBM Plex Serif", ui-serif, Georgia, serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--safelight);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

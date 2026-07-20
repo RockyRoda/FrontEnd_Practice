@@ -1,0 +1,53 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stamp {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+  border: 1px solid currentColor;
+  color: currentColor;
+  opacity: 0.55;
+  transition: border-color 120ms ease, color 120ms ease, background 120ms ease, opacity 120ms ease;
+  white-space: nowrap;
+}
+
+.stamp:hover {
+  opacity: 1;
+  border-color: var(--tide-bright);
+  color: var(--tide-bright);
+}
+
+.stampApproved {
+  opacity: 1;
+  border-color: var(--tide);
+  background: rgba(74, 145, 136, 0.16);
+  color: var(--tide-bright);
+}
+
+.regen {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: currentColor;
+  opacity: 0.55;
+  padding: 0.3rem 0.5rem;
+  border-radius: 2px;
+  transition: color 120ms ease, transform 120ms ease, opacity 120ms ease;
+}
+
+.regen:hover:not(:disabled) {
+  opacity: 1;
+  color: var(--safelight);
+  transform: rotate(35deg);
+}
+
+.regen:disabled {
+  opacity: 0.25;
+  cursor: default;
+}

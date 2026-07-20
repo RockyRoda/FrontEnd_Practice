@@ -1,0 +1,77 @@
+.sheet {
+  background: var(--neg);
+  border: 1px solid var(--neg-line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.perforation {
+  display: flex;
+  gap: 10px;
+  padding: 6px 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--ink) 0,
+    var(--ink) 8px,
+    var(--neg) 8px,
+    var(--neg) 18px
+  );
+  position: relative;
+  height: 14px;
+}
+
+.perforation::before {
+  content: "";
+  position: absolute;
+  inset: 3px 0;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--neg) 0,
+    var(--neg) 6px,
+    transparent 6px,
+    transparent 18px
+  );
+}
+
+.strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  list-style: none;
+  gap: 1px;
+  background: var(--neg-line);
+}
+
+.frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 900ms ease;
+}
+
+.negative {
+  filter: grayscale(0.7) contrast(1.3) brightness(0.55) sepia(0.25) hue-rotate(-8deg);
+}
+
+.developed {
+  filter: none;
+}
+
+.frameNumber {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  color: var(--brass);
+  background: rgba(28, 23, 18, 0.7);
+  padding: 1px 5px;
+  border-radius: 2px;
+}

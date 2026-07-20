@@ -1,0 +1,68 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.sweep {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 22%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--safelight-dim) 35%,
+    var(--safelight) 50%,
+    var(--safelight-dim) 65%,
+    transparent
+  );
+  filter: blur(6px);
+  animation: sweep 1.3s ease-in-out forwards;
+}
+
+@keyframes sweep {
+  from {
+    left: -25%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.label {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass);
+  animation: fade 1.3s ease-in-out forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sweep,
+  .label {
+    animation: none;
+    display: none;
+  }
+}

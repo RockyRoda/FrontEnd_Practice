@@ -1,0 +1,75 @@
+.main {
+  min-height: 100vh;
+  padding: 1.5rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--safelight);
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+}
+
+.intakeGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .intakeGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.18;
+  max-width: 20ch;
+}
+
+.subhead {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--paper-dim);
+  max-width: 46ch;
+}
+
+.developing {
+  position: relative;
+}

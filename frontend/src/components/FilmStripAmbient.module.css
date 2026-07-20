@@ -1,0 +1,52 @@
+.strip {
+  display: inline-flex;
+  flex-direction: column;
+  width: 46px;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--neg-line);
+}
+
+.perf {
+  height: 8px;
+  background: repeating-linear-gradient(90deg, var(--ink) 0, var(--ink) 4px, var(--neg) 4px, var(--neg) 9px);
+}
+
+.swatch {
+  height: 34px;
+  position: relative;
+  filter: grayscale(0.6) contrast(1.25) brightness(0.6) sepia(0.2) hue-rotate(-8deg);
+  animation: glow 5s ease-in-out infinite;
+}
+
+.sand {
+  background: #d8c39a;
+}
+.tide {
+  background: var(--tide-bright);
+}
+.brass {
+  background: var(--brass);
+}
+.safelight {
+  background: var(--safelight);
+}
+.ink {
+  background: #7a6a52;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    filter: grayscale(0.6) contrast(1.25) brightness(0.6) sepia(0.2) hue-rotate(-8deg);
+  }
+  50% {
+    filter: grayscale(0.25) contrast(1.1) brightness(0.85) sepia(0.1) hue-rotate(-4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swatch {
+    animation: none;
+  }
+}

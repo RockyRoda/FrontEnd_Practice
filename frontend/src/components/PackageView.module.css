@@ -1,0 +1,89 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sheetHead {
+  position: relative;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.35rem;
+  background: var(--ink-raised);
+  padding: 0.3rem;
+  border-radius: 2px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+  padding: 0.5rem 0.85rem;
+  border-radius: 2px;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.tab:hover {
+  color: var(--paper);
+}
+
+.tabActive {
+  background: var(--safelight);
+  color: var(--paper);
+}
+
+.count {
+  font-size: 0.65rem;
+  opacity: 0.75;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.approvedCount {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--tide-bright);
+  white-space: nowrap;
+}
+
+.copy,
+.reset {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.9rem;
+  border-radius: 2px;
+  border: 1px solid var(--neg-line);
+  color: var(--paper);
+  white-space: nowrap;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+.copy:hover {
+  border-color: var(--tide-bright);
+  color: var(--tide-bright);
+}
+
+.reset:hover {
+  border-color: var(--safelight);
+  color: var(--safelight);
+}
